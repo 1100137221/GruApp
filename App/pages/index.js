@@ -1,6 +1,6 @@
 import {Navigation, ScreenVisibilityListener} from 'react-native-navigation';
-import Weather from './weather';
-import Rate from './rate';
+import Weather from './Weather';
+import Rate from './Rate';
 
 export function registerScreens() {
   Navigation.registerComponent('weather', () => Weather);

@@ -42,17 +42,17 @@ export default class App {
   startApp() {
     // this will start our app
     const tabs = [{
-      label: 'Weather',
+      label: '天氣',
       screen: 'weather',
       icon:weatherIcon,
       selectedIcon:weatherIcon,
-      title: 'Weather',
+      title: '天氣',
     }, {
-      label: 'Rate',
+      label: '匯率',
       screen: 'rate',
       icon:currencyIcon,
       selectedIcon:currencyIcon,
-      title: 'Rate',
+      title: '匯率',
     }];
 
 
