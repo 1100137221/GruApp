@@ -6,6 +6,7 @@ import {StyleSheet, View, Text, Button, ListView, Image} from 'react-native';
 import ObservableWeatherStore from '../stores/WeatherStore';
 import ContentPage from '../components/ContentPage';
 import NiceText from '../components/NiceText';
+import LoadingText from '../components/LoadingText';
 import CommonStyles from '../styles/CommonStyles';
 import CommonColors from '../styles/CommonColors';
 
@@ -103,9 +104,9 @@ class Weather extends React.Component {
         
         return (
             <View style={{flex: 1, backgroundColor: 'white'}}>
-                <ContentPage>
+                <ContentPage style={{flex:1}}>
                     {
-                        ObservableWeatherStore.isLoading ? null : this._weatherListView()
+                        ObservableWeatherStore.isLoading ? <LoadingText  text={'loading...'} /> : this._weatherListView()
                     }
                 </ContentPage>
             </View>
