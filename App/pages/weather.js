@@ -5,6 +5,7 @@ import {observer} from 'mobx-react/native';
 import {StyleSheet, View, Text, Button, ListView, Image} from 'react-native';
 import ObservableWeatherStore from '../stores/WeatherStore';
 import ContentPage from '../components/ContentPage';
+import NiceText from '../components/NiceText';
 import CommonStyles from '../styles/CommonStyles';
 import CommonColors from '../styles/CommonColors';
 
@@ -72,10 +73,10 @@ class Weather extends React.Component {
                             <Image source={this._getImage(img)} />                        
                         </View>
                         <View>
-                            <Text>{data[0].countryName}</Text>
+                            <NiceText text={data[0].countryName} color={'normal'} fontSize={14} />
                         </View>
                         <View style={{marginLeft:5}}>
-                            <Text>{data[0].temperature}</Text>
+                            <NiceText text={data[0].temperature} color={'normal'} fontSize={14} />
                         </View>
                     </View>
                 </View>
